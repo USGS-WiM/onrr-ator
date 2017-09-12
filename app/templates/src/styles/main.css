@@ -186,8 +186,9 @@ body {
 }
 
 #logo {
-  height: 55px;
-  width: 160px;
+  height: 70px;
+  width: 70px;
+  padding-bottom: 5px;
 }
 
 /*
@@ -263,7 +264,7 @@ body {
 
 #main-menu {
   width: 270px;
-  height: calc(100% - 70px);
+  height: calc(100% - 75px);
   float: left;
   background-color: #20202f;
   margin-top: 65px;

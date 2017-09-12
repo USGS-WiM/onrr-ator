@@ -1,12 +1,12 @@
 {
-  "name": "generator-wim",
+  "name": "generator-onrr",
   "version": "0.0.1",
-  "description": "WiM generator",
+  "description": "ONRR generator",
   "license": "MIT",
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marsmith/generator-wim"
+    "url": "https://github.com/USGS-WiM/onrr-ator"
   },
   "author": {
     "url": "https://github.com/marsmith"
@@ -34,10 +34,10 @@
   "readmeFilename": "README.md",
   "gitHead": "d956bb50b852112ade66cf0b0afe5a1112ef0b66",
   "bugs": {
-    "url": "https://github.com/marsmith/generator-wim/issues"
+    "url": "https://github.com/USGS-WiM/onrr-ator/issues"
   },
-  "homepage": "https://github.com/marsmith/generator-wim",
-  "_id": "generator-wim@0.0.0",
+  "homepage": "https://github.com/USGS-WiM/onrr-ator",
+  "_id": "onrr-ator@0.0.0",
   "_shasum": "be2e0d965b5899134c19063fdcb82502ce5fbcfe",
-  "_from": "generator-wim@*"
+  "_from": "onrr-ator@*"
 }
