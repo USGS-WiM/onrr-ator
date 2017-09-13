@@ -79,6 +79,41 @@
 
 }
 
+.onrrHeader{
+  position: relative;
+  top:-2px;
+  font-weight:300;
+}
+
+.onrrHeader {
+position: relative;
+width: 100%;
+line-height: 70px;
+padding: 0 10px;
+font-size: 23px;
+color: #ffffff;
+margin: 0;
+z-index: 10;
+}
+
+.onrrHeader-mobile {
+  position: relative;
+  top:-2px;
+  font-weight:300;
+}
+
+.onrrHeader-mobile {
+display: none;
+position: relative;
+width: 100%;
+line-height: 70px;
+padding: 0 10px;
+font-size: 23px;
+color: #ffffff;
+margin: 0;
+z-index: 10;
+}
+
 
 /*
     ===========================
@@ -352,6 +387,15 @@ body {
   }
 
   .app-name-mobile {
+    display: inline;
+    font-size:small;
+  }
+
+  .onrrHeader {
+    display: none;
+  }
+
+  .onrrHeader-mobile {
     display: inline;
     font-size:small;
   }

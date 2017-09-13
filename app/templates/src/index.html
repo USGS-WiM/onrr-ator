@@ -13,29 +13,15 @@
     <link rel="stylesheet" href="https://txpub.usgs.gov/DSS/search_api/2.1/api/search_api.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <% if (buildSystem == "webpack") {%>
-    <script src="./scripts/vendor.bundle.min.js"></script>
-    <script src="./scripts/bundle.min.js"></script> 
-    <%}%>
-
-    <% if (mappingAPI == "esri") {%>
     <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css">
     <script src="https://js.arcgis.com/3.20/"></script>
-    <%}%>
+
 
     <!-- USGS Search -->
     <script type="text/javascript" src="https://txpub.usgs.gov/DSS/search_api/2.1/api/search_api.min.js"></script>
 
-
-    <% if (buildSystem == "gulp") {%>
         <!-- build:css styles/vendor.css -->
         <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-        <% if (mappingAPI == "esri") {%>
-
-        <%}%>
-        <% if (mappingAPI == "leaflet") {%>
-        <link rel="stylesheet" href="../node_modules/leaflet/dist/leaflet.css">
-        <%}%>
         <!-- endbuild -->
         
         <!-- build:css styles/custom.css -->
@@ -46,10 +32,6 @@
         <!-- build:js scripts/vendor.js -->
         <script src="../node_modules/jquery/dist/jquery.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-        <% if( mappingAPI == "leaflet") {%>
-        <script src="../node_modules/leaflet/dist/leaflet.js"></script>
-        <script src="../node_modules/esri-leaflet/dist/esri-leaflet.js"></script>
-        <%}%>
         <!-- endbuild -->
 
         <!-- build:js scripts/custom.js -->
@@ -59,7 +41,6 @@
         <script src="scripts/core-full.js"></script>
         <%}%>
         <!-- endbuild -->
-    <%}%>
 
     <!-- Start Google Analytics -->
     <!--
@@ -82,6 +63,7 @@
     <div id="top-menu">
         <div class="title">
             <a class='top-menu-brand' href="https://www.onrr.gov/"><img id="logo" src="images/onrr.png"></a>
+            <span class="onrrHeader">Office of National Resources Revenue </span> <span class="onrrHeader-mobile">Office of National Resources Revenue</span>
             <span class="app-name"><%= appName %></span> <span class="app-name-mobile"><%= appName %></span> 
         </div>
         <div id="mobile-main-menu">
@@ -200,7 +182,7 @@
                     </ul>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="aboutTabPane"></br>
-                            <p>Add some information about this app.</p>
+                            <p>ONRR manages and ensures full payment of revenues owed for the development of the Nation’s energy and natural resources on the Outer Continental Shelf and onshore Federal and Indian lands. In performing this important fiduciary role, ONRR collects an average of over $10 billion dollars in annual revenue -- one of the Federal government's largest sources of non-tax revenue.</p>
                             <p>Developed by <a href="https://wim.usgs.gov" target="_blank">Web Informatics and Mapping (WiM)</a></p>
                             <span id="appVersion"></span>
                         </div>
@@ -427,7 +409,6 @@
 
     </div>
 
-    <% if( mappingAPI == "esri") {%>
     <div id="homeButton"></div>
     <div id="locateButton"></div>
 
@@ -440,18 +421,5 @@
         <span id="longitude">x</span>
         <span id="mapCenterLabel"  class="hover-content"> (center)</span>
     </div>
-    <%}%>
-
-    <% if( mappingAPI == "leaflet") {%>
-    <div id="latLngScale" class="latLngScale">
-            <span class="hover-content"> <b>Map scale </b></span>
-            1:<span id="scale"></span> | <span class="hover-content"> <b>Zoom level </b></span> <span id="zoomLevel"></span><br>
-            <span class="hover-content"><b>Latitude</b></span>
-            <span id="latitude">y</span> |
-            <span class="hover-content"> <b>Longitude</b></span>
-            <span id="longitude">x</span>
-            <span id="mapCenterLabel"  class="hover-content"> (center)</span>
-    </div>
-    <%}%>
   </body>
 </html>
