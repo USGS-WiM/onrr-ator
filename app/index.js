@@ -89,10 +89,6 @@ var onrrGenerator = class extends yeoman {
         choices: [
           'gulp',
         ],
-        //only ask this question if the mappingAPI is leaflet right now
-        when: function(answers) {
-          return answers.mappingAPI === 'leaflet';
-        }
       }]).then((answers) => {
         this.appName = answers.appName;
         this.mappingAPI = answers.mappingAPI;

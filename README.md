@@ -57,7 +57,7 @@ npm update
 ## Editing the generator itself
 The process described below is for making edits to the actual generator code, i.e. the source from which all generated apps will be generated. Exercise caution, as these edits will affect all future generations.
 
-###1. Ensure that your local repo of generator-wim is up-to-date
+###1. Ensure that your local repo of onrr-ator is up-to-date
 run a pull  from the upstream at your local repo directory to retrieve latest from the org repo at [USGS-WiM/onrr-ator](https://github.com/USGS-WiM/onrr-ator).
 ```bash
 cd onrr-ator
