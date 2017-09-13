@@ -123,7 +123,7 @@ var onrrGenerator = class extends yeoman {
     };
 
     //first do full copy ignoring templated files
-    this.fs.copy(this.templatePath(), this.destinationPath(), { globOptions: { dot: true, ignore: ['**/package.json','**/index.html','**/gulpfile.js','**/webpack.config.js','**/core.js','**/leaflet/*','**/esri/*']}});
+    this.fs.copy(this.templatePath(), this.destinationPath(), { globOptions: { dot: true, ignore: ['**/package.json','**/index.html','**/gulpfile.js','**/core.js','**/esri/*']}});
 
     //then overwrite template files
     this.fs.copyTpl(this.templatePath('src/index.html'), this.destinationPath('src/index.html'), this.appConfig);
@@ -131,7 +131,6 @@ var onrrGenerator = class extends yeoman {
     this.fs.copyTpl(this.templatePath('src/scripts/' + this.mappingAPI + '/core-lite.js'), this.destinationPath('src/scripts/core-lite.js'), this.appConfig);
     if (this.mappingFlavor == 'full') this.fs.copyTpl(this.templatePath('src/scripts/' + this.mappingAPI + '/core-full.js'), this.destinationPath('src/scripts/core-full.js'), this.appConfig);
     if (this.buildSystem == 'gulp') this.fs.copyTpl(this.templatePath('gulpfile.js'), this.destinationPath('gulpfile.js'), this.appConfig);
-    if (this.buildSystem == 'webpack') this.fs.copyTpl(this.templatePath('webpack.config.js'), this.destinationPath('webpack.config.js'), this.appConfig);
   }
 
   install() {
