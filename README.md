@@ -1,6 +1,6 @@
-# generator-wim
+# onrr-ator
 
-> [Yeoman](http://yeoman.io) generator for scaffolding html5/javascript web mappinng apps.  Allows for use of [ESRI](https://developers.arcgis.com/javascript/) or [Leaflet](http://leafletjs.com/) as the mapping API.   It uses npm for dependency injection and gulp as its task runner.
+> [Yeoman](http://yeoman.io) generator for scaffolding html5/javascript web mappinng apps.  Allows for use of [ESRI](https://developers.arcgis.com/javascript/) as the mapping API.   It uses npm for dependency injection and gulp as its task runner.
 
 
 ## Generator installation
@@ -16,18 +16,18 @@ This will install the following packages globally (to your "C:\Users\%user%\AppD
 npm install -g yo
 ```
 
-#### 3.  Clone 'generator-wim' repo
+#### 3.  Clone 'onrr-ator' repo
 Create a local copy of the generator
 
 ```bash
-git clone https://github.com/USGS-WiM/generator-wim.git
+git clone https://github.com/USGS-WiM/onrr-ator.git
 ```
 
-#### 4.  Create symbolic link for generator-wim inside the generator-wim folder
-This 'tricks' node into thinking your generator-wim is a globally installed node module in this location: "C:\Users\%user%\AppData\Roaming\npm\node_modules"
+#### 4.  Create symbolic link for onrr-ator inside the onrr-ator folder
+This 'tricks' node into thinking your onrr-ator is a globally installed node module in this location: "C:\Users\%user%\AppData\Roaming\npm\node_modules"
 
 ```bash
-cd generator-wim
+cd onrr-ator
 npm install
 npm link
 ```
@@ -38,14 +38,14 @@ Create a new folder for the generated app and run the generator
 ```bash
 md new-app
 cd new-app
-yo wim
+yo onrr
 ```
 
 ## Updating the generator source and dependencies
 
 #### 1.  Get latest code from github
 ```bash
-cd generator-wim
+cd onrr-ator
 git pull origin master
 ```
 #### 2.  Update dependencies
@@ -57,10 +57,10 @@ npm update
 ## Editing the generator itself
 The process described below is for making edits to the actual generator code, i.e. the source from which all generated apps will be generated. Exercise caution, as these edits will affect all future generations.
 
-###1. Ensure that your local repo of generator-wim is up-to-date
-run a pull  from the upstream at your local repo directory to retrieve latest from the org repo at [USGS-WiM/generator-wim](https://github.com/USGS-WiM/generator-wim).
+###1. Ensure that your local repo of onrr-ator is up-to-date
+run a pull  from the upstream at your local repo directory to retrieve latest from the org repo at [USGS-WiM/onrr-ator](https://github.com/USGS-WiM/onrr-ator).
 ```bash
-cd generator-wim
+cd onrr-ator
 git pull origin master
 ```
 
@@ -71,7 +71,7 @@ git config --global mergetool.p4merge.cmd "C:\\Users\\%username%\\Perforce\\p4me
 \"$REMOTE\" \"$MERGED\""
 ```
 
- For good housekeeping, follow up your upstream pull with a push to your personal account repo so it is in sync with the org repo at [USGS-WiM/generator-wim](https://github.com/USGS-WiM/generator-wim).
+ For good housekeeping, follow up your upstream pull with a push to your personal account repo so it is in sync with the org repo at [USGS-WiM/onrr-ator](https://github.com/USGS-WiM/onrr-ator).
 
 ```bash
 git push origin master
@@ -79,11 +79,11 @@ git push origin master
 
 ###2. Generate a new app instance for development
 
-Create a new directory for generator code development. Something like "generator-wim-dev" is recommended. You only need to do this the first time. You can always generate an app there later which will overwrite older code.
+Create a new directory for generator code development. Something like "onrr-ator-dev" is recommended. You only need to do this the first time. You can always generate an app there later which will overwrite older code.
 
-in your generator dev directory, run the yeoman command with the alias for the wim generator
+in your generator dev directory, run the yeoman command with the alias for the onrr-ator
 ```bash
-yo wim
+yo onrr
 ```
 follow the prompts, and eventually you will have app code in your dev directory, whose contents should now contain the follwoing files:
 ```bash
@@ -104,16 +104,16 @@ gulp
 ```
 This will create a build folder including minified and combined dependency libraries. Open the app from the build folder as a final test of your changes.
 
-###5. Create a new branch in 'generator-wim'
+###5. Create a new branch in 'onrr-ator'
 Create a new branch of the cloned repo that will contain your changes
 ```bash
 git checkout -b 'branch-name'
 ```
 
-###6. Copy changes from test instance back to the generator-wim repo
-Copy content from your edited files into their counterparts in the local generator-wim repo. Files are located at `generator-wim/app/templates` and can be identified by the leading underscore in their names. E.g. "_index.html", "_core.js" and "_main.css"
+###6. Copy changes from test instance back to the onrr-ator repo
+Copy content from your edited files into their counterparts in the local onrr-ator repo. Files are located at `onrr-ator/app/templates` and can be identified by the leading underscore in their names. E.g. "_index.html", "_core.js" and "_main.css"
 
-###7. Submit new branch back to USGS-WiM 'generator-wim' repo
+###7. Submit new branch back to USGS-WiM 'onrr-ator' repo
 ```bash
 git add .
 git commit -m 'message describing your updates'
