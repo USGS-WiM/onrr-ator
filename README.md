@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 ![WiM](wimlogo.png)
 
 # onrr-ator
-=======
 
 [Yeoman](http://yeoman.io) generator for scaffolding html5/javascript web mappinng apps.  Allows for use of [ESRI](https://developers.arcgis.com/javascript/) or [Leaflet](http://leafletjs.com/) as the mapping API.   It uses npm for dependency injection and gulp as its task runner.
 
