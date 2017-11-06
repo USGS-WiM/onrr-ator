@@ -60,12 +60,6 @@ gulp.task('patch', ['build'], function () { return inc('patch'); });
 gulp.task('feature', ['build'], function () { return inc('minor'); });
 gulp.task('release', ['build'], function () { return inc('major'); });
 
-//copy leaflet images
-gulp.task('leaflet', function() {
-    return gulp.src('node_modules/leaflet/dist/images/*.*')
-        .pipe(gulp.dest('src/images'));
-});
-
 //less compilation
 gulp.task('less', function () {
     return gulp.src(['node_modules/wim-mapper-styles/less/base.less'])
@@ -135,7 +129,7 @@ gulp.task('clean', function(cb) {
 
 // Build
 gulp.task('build', ['clean'], function () {
-    gulp.start('html', 'images', 'less', 'leaflet', 'appConfig');
+    gulp.start('html', 'images', 'less', 'appConfig');
 });
 
 // Default task

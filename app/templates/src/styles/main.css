@@ -79,6 +79,41 @@
 
 }
 
+.onrrHeader{
+  position: relative;
+  top:-2px;
+  font-weight:300;
+}
+
+.onrrHeader {
+position: relative;
+width: 100%;
+line-height: 70px;
+padding: 0 10px;
+font-size: 23px;
+color: #ffffff;
+margin: 0;
+z-index: 10;
+}
+
+.onrrHeader-mobile {
+  position: relative;
+  top:-2px;
+  font-weight:300;
+}
+
+.onrrHeader-mobile {
+display: none;
+position: relative;
+width: 100%;
+line-height: 70px;
+padding: 0 10px;
+font-size: 23px;
+color: #ffffff;
+margin: 0;
+z-index: 10;
+}
+
 
 /*
     ===========================
@@ -186,8 +221,9 @@ body {
 }
 
 #logo {
-  height: 55px;
-  width: 160px;
+  height: 70px;
+  width: 70px;
+  padding-bottom: 5px;
 }
 
 /*
@@ -263,7 +299,7 @@ body {
 
 #main-menu {
   width: 270px;
-  height: calc(100% - 70px);
+  height: calc(100% - 75px);
   float: left;
   background-color: #20202f;
   margin-top: 65px;
@@ -351,6 +387,15 @@ body {
   }
 
   .app-name-mobile {
+    display: inline;
+    font-size:small;
+  }
+
+  .onrrHeader {
+    display: none;
+  }
+
+  .onrrHeader-mobile {
     display: inline;
     font-size:small;
   }
@@ -563,25 +608,4 @@ pre {
 /* Hiding 'Powered by ESRI' logo */
 .map .logo-med {
   display: none;
-}
-
-
-
-.esri-leaflet-logo leaflet-control {
-    display: none;
-}
-
-/* Styling Home Button */
-.leaflet-control-defaultextent-toggle {
-  text-indent: -9999px;
-  white-space: nowrap;
-  background-image: url('../images/home.png');
-  width: 26px;
-  height: 26px;
-  display: block;
-}
-
-.leaflet-left {
-  left: 275px;
-  top: 75px;
 }

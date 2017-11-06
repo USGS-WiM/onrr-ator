@@ -1,6 +1,8 @@
+<<<<<<< HEAD
 ![WiM](wimlogo.png)
 
 # onrr-ator
+=======
 
 [Yeoman](http://yeoman.io) generator for scaffolding html5/javascript web mappinng apps.  Allows for use of [ESRI](https://developers.arcgis.com/javascript/) or [Leaflet](http://leafletjs.com/) as the mapping API.   It uses npm for dependency injection and gulp as its task runner.
 
@@ -46,7 +48,7 @@ Create a new folder for the generated app and run the generator
 ```bash
 md new-app
 cd new-app
-yo wim
+yo onrr
 ```
 
 ## Updating the generator source and dependencies
@@ -89,9 +91,13 @@ git push origin master
 
 Create a new directory for generator code development. Something like "onrr-ator-dev" is recommended. You only need to do this the first time. You can always generate an app there later which will overwrite older code.
 
+<<<<<<< HEAD
 in your generator dev directory, run the yeoman command with the alias for the onrr generator
+=======
+in your generator dev directory, run the yeoman command with the alias for the onrr-ator
+>>>>>>> 336211c3969f2ce5fd12717154008fd009728c40
 ```bash
-yo wim
+yo onrr
 ```
 follow the prompts, and eventually you will have app code in your dev directory, whose contents should now contain the follwoing files:
 ```bash

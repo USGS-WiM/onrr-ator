@@ -6,7 +6,7 @@ var chalk = require('chalk');
 var slugify = require("underscore.string/slugify");
 var glob = require('glob');
 
-var WiMGenerator = class extends yeoman {
+var onrrGenerator = class extends yeoman {
   
   // The name `constructor` is important here
   constructor(args,opts) {
@@ -38,25 +38,25 @@ var WiMGenerator = class extends yeoman {
   }
 
   prompting() {
-    var welcomeMsg =  '\n   __      __.__   _____   ' +
-                      '\n  /  \\    /  \\__| /     \\  ' +
-                      '\n  \\   \\/\\/   /  |/  \\ /  \\ ' + 
-                      '\n   \\        /|  /    Y    \\' +
-                      '\n    \\__/\\  / |__\\____|__  /' +
-                      '\n         \\/             \\/ ' +
+    var welcomeMsg =  '\n  _____ _   _ ____________ ' +
+                      '\n |  _  | \ | || ___ \ ___ \ ' +
+                      '\n | | | |  \| || |_/ / |_/ / ' + 
+                      '\n | | | | . ` ||    /|    / ' +
+                      '\n \ \_/ / |\  || |\ \| |\ \ ' +
+                      '\n  \___/\_| \_/\_| \_\_| \_|' +
                       '\n';
 
 
     // have Yeoman greet the user
     this.log(chalk.green(welcomeMsg));
     
-    if ((this.options.env.cwd).indexOf('generator-wim') != -1) {
-      this.log(chalk.yellow('yo you need to chill. (looks like you are trying to generate an app in the generator-wim repo. Pick a different directory, playa)'));
+    if ((this.options.env.cwd).indexOf('generator-onrr') != -1) {
+      this.log(chalk.yellow('yo you need to chill. (looks like you are trying to generate an app in the generator-onrr repo. Pick a different directory, playa)'));
       return;
     }
 
     // replace it with a short and sweet description of your generator
-    this.log(yosay(chalk.magenta('You\'re using the fantastic WiM generator v2.')));
+    this.log(yosay(chalk.magenta('You\'re using the fantastic ONRR generator.')));
 
     //check for command line arguments
     if ((!this.options.appName) && (!this.options.mappingAPI) && (!this.options.mappingFlavor) && (!this.options.buildSystem)) {
@@ -70,7 +70,6 @@ var WiMGenerator = class extends yeoman {
         name: 'mappingAPI',
         message: 'Choose your mapping API:',
         choices: [
-          'leaflet',
           'esri'
         ]
       },
@@ -89,12 +88,7 @@ var WiMGenerator = class extends yeoman {
         message: 'Choose your build system:',
         choices: [
           'gulp',
-          'webpack'
         ],
-        //only ask this question if the mappingAPI is leaflet right now
-        when: function(answers) {
-          return answers.mappingAPI === 'leaflet';
-        }
       }]).then((answers) => {
         this.appName = answers.appName;
         this.mappingAPI = answers.mappingAPI;
@@ -129,7 +123,7 @@ var WiMGenerator = class extends yeoman {
     };
 
     //first do full copy ignoring templated files
-    this.fs.copy(this.templatePath(), this.destinationPath(), { globOptions: { dot: true, ignore: ['**/package.json','**/index.html','**/gulpfile.js','**/webpack.config.js','**/core.js','**/leaflet/*','**/esri/*']}});
+    this.fs.copy(this.templatePath(), this.destinationPath(), { globOptions: { dot: true, ignore: ['**/package.json','**/index.html','**/gulpfile.js','**/core.js','**/esri/*']}});
 
     //then overwrite template files
     this.fs.copyTpl(this.templatePath('src/index.html'), this.destinationPath('src/index.html'), this.appConfig);
@@ -137,7 +131,6 @@ var WiMGenerator = class extends yeoman {
     this.fs.copyTpl(this.templatePath('src/scripts/' + this.mappingAPI + '/core-lite.js'), this.destinationPath('src/scripts/core-lite.js'), this.appConfig);
     if (this.mappingFlavor == 'full') this.fs.copyTpl(this.templatePath('src/scripts/' + this.mappingAPI + '/core-full.js'), this.destinationPath('src/scripts/core-full.js'), this.appConfig);
     if (this.buildSystem == 'gulp') this.fs.copyTpl(this.templatePath('gulpfile.js'), this.destinationPath('gulpfile.js'), this.appConfig);
-    if (this.buildSystem == 'webpack') this.fs.copyTpl(this.templatePath('webpack.config.js'), this.destinationPath('webpack.config.js'), this.appConfig);
   }
 
   install() {
@@ -146,4 +139,4 @@ var WiMGenerator = class extends yeoman {
 
 };
 
-module.exports = WiMGenerator;
+module.exports = onrrGenerator;
