@@ -18,7 +18,7 @@
 
     "homepageURL": "https://wim.usgs.gov",
     "downloadURL": "https://github.com/USGS-WiM/onrr-ator/archive/staging.zip",
-    "disclaimerURL": "https://github.com/USGS-WiM/onrr-ator/blob/staging/LICENSE.md",
+    "disclaimerURL": "https://github.com/USGS-WiM/onrr-ator/blob/staging/DISCLAIMER.md",
     "repositoryUrl": "https://github.com/USGS-WiM/onrr-ator",
     "vcs": "git",
 
